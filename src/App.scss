@@ -11,12 +11,13 @@ h1 {
   display: flex;
   color: #ffffff75;
   margin: -19px 0 10px 0px;
-  font-size: 43px;
+  font-size: 118px;
   justify-content: center;
 }
 
 input {
   outline: none;
+  font-size: 28px;
   margin-top: 10px;
   border-radius: 5px;
 }
@@ -44,29 +45,30 @@ input {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 711px;
+  width: 1217px;
 }
 
 .todo-list-wrapper {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 11px;
 
   .todo-container {
   display: flex;
   justify-content: center;
 
     .todo {
-      position: relative;
-      min-height: 2.5rem;
-      border: 1px solid rgba(0, 0, 0, 0.322);
-      width: 350px;
-      border-radius: 8px;
       display: flex;
+      position: relative;
       flex-direction: column;
+      
+      min-height: 4.5rem;
+      width: 545px;
+      border: 1px solid rgba(0, 0, 0, 0.322);
+      border-radius: 8px;
       box-shadow: 7px 6px 4px -4px rgba(0,0,0,0.35);
-
+      font-size: 34px;
       label {
         word-wrap: break-word;
         padding-right: 2rem;
@@ -75,14 +77,14 @@ input {
       #title {
         color: #dfc225;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        padding-left: 7px;
+        padding-left: 63px;
 
         font-weight: bold;
         text-decoration: underline;
       }
       
       #desc {
-        padding-left: 8px;
+        padding-left: 38px;
         padding-bottom: 5px;
         color: #f5a20b;
       }
@@ -91,6 +93,8 @@ input {
         position: absolute;
         top: -6px;
         right: 2px;
+        height: 26px;
+        width: 26px;
         cursor: pointer;
 
       
@@ -100,10 +104,10 @@ input {
         position: absolute;
         border: 0.1px solid red;
         padding: 1px;
-        bottom: 5px;
-        right: 4px;
-        font-size: 11px;
-        width: 16px;
+        top: 7px;
+        left: 7px;
+        font-size: 23px;
+        width: 31px;
         &:hover {
           background-color: red;
         }
@@ -114,7 +118,7 @@ input {
 
 button {
   cursor: pointer;
-  border-radius: 15px;
+  border-radius: 21px;
   border: none;
   
 }
@@ -125,10 +129,10 @@ button {
   
   #show-input {
     background-color: rgb(255, 189, 23);
-    border-radius: 36px;
-    font-size: 38px;
-    height: 43px;
-    width: 43px;
+    border-radius: 89px;
+    font-size: 96px;
+    height: 90px;
+    width: 95px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,12 +147,14 @@ button {
 .clear-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 7px;
 
   #clear-all-btn {
+    padding: 0 16px;
+    font-size: 34px;
     margin-right: 5px;
-    margin-left: 17px;
+    margin-left: 38px;
     background-color: #ee6c15;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
@@ -158,6 +164,8 @@ button {
   }
 
   #clear-completed-btn {
+    padding: 0 16px;
+    font-size: 34px;
     background-color: #1e9340;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
@@ -182,8 +190,8 @@ button {
 }
 .input-box {
   background-color: #1c1b1b;
-  width: 17rem;
-  height: 10rem;
+  width: 31rem;
+  height: 17rem;
   border-radius: 35px;
   box-shadow: 4px 4px 8px 3px rgb(0 0 0 / 35%);
 
@@ -193,14 +201,15 @@ button {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 13rem;
-    margin: 22px auto;
+    width: 22rem;
+    margin: 61px auto;
     
     .add-cancel-btns {
 
       #add-btn, #cancel-btn {
-        width: 48%;
+        width: 169px;
         margin-top: 24px;
+        font-size: 34px;
       }
       #add-btn {
         margin-right: 8px;
@@ -228,16 +237,73 @@ button {
 }
 
 .disclaimer {
-  font-size: 10px;
-  width: 185px;
+  font-size: 22px;
+  width: 404px;
 }
 
-@media (max-width: 714px) {
+@media (max-width: 1248px) {
   .content-wrapper {
     width: 163px;
   }
   .todo-list-wrapper {
     flex-direction: column;
   }
+
+  .clear-container {
+    width: 405px;
+    
+  }
 }
 
+@media (max-width: 470px) {
+  .content-wrapper {
+    width: 133px;
+  }
+  .todo-list-wrapper {
+    flex-direction: column;
+    
+    .todo-container {
+      .todo {
+        width: 409px;
+        min-height: 0;
+        font-size: 24px;
+      }
+      
+      .delete-btn {
+        font-size: 21px;
+        width: 29px;
+      }
+    }
+  }
+
+  .add-input-container {
+    #show-input {
+      font-size: 75px;
+      height: 70px;
+      width: 73px;
+    }
+  }
+
+  .clear-container {
+    width: 405px;
+    padding-bottom: 10px;
+    #clear-all-btn, #clear-completed-btn {
+      font-size: 29px;
+    }
+    
+  }
+
+  .input-box {
+    width: 25rem;
+    height: 17rem;
+
+    .input-container {
+      .add-cancel-btns {
+        #add-btn, #cancel-btn {
+          font-size: 27px;
+        }
+      }
+    }
+  }
+
+}

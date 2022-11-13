@@ -49,7 +49,7 @@ const TodoInput = ({ setTodos, todos }) => {
 
   return (
     <div>
-      <div className={"add-input-container"}>
+      <div className="add-input-container">
         <button
           id="show-input"
           onClick={() => {
