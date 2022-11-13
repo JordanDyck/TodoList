@@ -1,0 +1,243 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  background-color: rgb(30 30 30);
+  
+  
+}
+
+h1 {
+  display: flex;
+  color: #ffffff75;
+  margin: -19px 0 10px 0px;
+  font-size: 43px;
+  justify-content: center;
+}
+
+input {
+  outline: none;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.title-error {
+  background: rgba(255, 255, 255, 0.979);
+  color: red;
+  margin: 0;
+}
+
+.invisible {
+  margin: 0;
+  display: none;
+}
+
+.input-error {
+  border: 1.5px solid red;
+  &::placeholder {
+    color: red;
+  }
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 711px;
+}
+
+.todo-list-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  .todo-container {
+  display: flex;
+  justify-content: center;
+
+    .todo {
+      position: relative;
+      min-height: 2.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.322);
+      width: 350px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 7px 6px 4px -4px rgba(0,0,0,0.35);
+
+      label {
+        word-wrap: break-word;
+        padding-right: 2rem;
+      }
+    
+      #title {
+        color: #dfc225;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding-left: 7px;
+
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      
+      #desc {
+        padding-left: 8px;
+        padding-bottom: 5px;
+        color: #f5a20b;
+      }
+    
+      .todo-check {
+        position: absolute;
+        top: -6px;
+        right: 2px;
+        cursor: pointer;
+
+      
+      }
+
+      .delete-btn {
+        position: absolute;
+        border: 0.1px solid red;
+        padding: 1px;
+        bottom: 5px;
+        right: 4px;
+        font-size: 11px;
+        width: 16px;
+        &:hover {
+          background-color: red;
+        }
+      }
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+  border-radius: 15px;
+  border: none;
+  
+}
+
+.add-input-container {
+  display: flex;
+  justify-content: center;
+  
+  #show-input {
+    background-color: rgb(255, 189, 23);
+    border-radius: 36px;
+    font-size: 38px;
+    height: 43px;
+    width: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: rgb(255, 210, 97);
+    }
+
+  }
+}
+
+.clear-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 7px;
+
+  #clear-all-btn {
+    margin-right: 5px;
+    margin-left: 17px;
+    background-color: #ee6c15;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    &:hover {
+      background-color: #ff371d;
+    }
+  }
+
+  #clear-completed-btn {
+    background-color: #1e9340;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    &:hover {
+      background-color: #28d85a;
+    }
+  }
+
+}
+
+.modal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+  z-index: 2;
+}
+.input-box {
+  background-color: #1c1b1b;
+  width: 17rem;
+  height: 10rem;
+  border-radius: 35px;
+  box-shadow: 4px 4px 8px 3px rgb(0 0 0 / 35%);
+
+  .input-container {
+    
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 13rem;
+    margin: 22px auto;
+    
+    .add-cancel-btns {
+
+      #add-btn, #cancel-btn {
+        width: 48%;
+        margin-top: 24px;
+      }
+      #add-btn {
+        margin-right: 8px;
+        background-color: #1e9340;
+
+        &:hover {
+          background-color: #28d85a;
+        }
+      }
+
+      #cancel-btn {
+        background-color: #eb7427;
+
+        &:hover {
+          background-color: #ff371d;
+        }
+      }
+
+    }
+  }
+}
+
+.hide-input {
+  display: none;
+}
+
+.disclaimer {
+  font-size: 10px;
+  width: 185px;
+}
+
+@media (max-width: 714px) {
+  .content-wrapper {
+    width: 163px;
+  }
+  .todo-list-wrapper {
+    flex-direction: column;
+  }
+}
+
